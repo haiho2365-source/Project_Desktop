@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|d:\\ueh\\k\u00EC 4\\l\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\build_class\\build_class\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|solutionrelative:build_class\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|d:\\ueh\\k\u00EC 4\\l\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\build_class\\build_class\\build_class.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|solutionrelative:build_class\\build_class.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|d:\\ueh\\k\u00EC 4\\l\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\build_class\\build_class\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|solutionrelative:build_class\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|d:\\ueh\\k\u00EC 4\\l\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\build_class\\build_class\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|solutionrelative:build_class\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|d:\\ueh\\k\u00EC 4\\l\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\build_class\\build_class\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|solutionrelative:build_class\\advertisement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|d:\\ueh\\k\u00EC 4\\l\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\build_class\\build_class\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|solutionrelative:build_class\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|d:\\ueh\\k\u00EC 4\\l\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\build_class\\build_class\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{835DAB76-633A-4977-89FE-65ED7A89B37F}|Build_class\\Build_class.csproj|solutionrelative:build_class\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Logger.cs",
+              "RelativeDocumentMoniker": "Build_class\\Logger.cs",
+              "ToolTip": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Logger.cs",
+              "RelativeToolTip": "Build_class\\Logger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T17:47:00.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Advertisement.cs",
+              "DocumentMoniker": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Advertisement.cs",
+              "RelativeDocumentMoniker": "Build_class\\Advertisement.cs",
+              "ToolTip": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Advertisement.cs",
+              "RelativeToolTip": "Build_class\\Advertisement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T17:46:57.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Tag.cs",
+              "DocumentMoniker": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Tag.cs",
+              "RelativeDocumentMoniker": "Build_class\\Tag.cs",
+              "ToolTip": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Tag.cs",
+              "RelativeToolTip": "Build_class\\Tag.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T17:46:53.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Comment.cs",
+              "RelativeDocumentMoniker": "Build_class\\Comment.cs",
+              "ToolTip": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Comment.cs",
+              "RelativeToolTip": "Build_class\\Comment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T17:46:48.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Build_class",
+              "DocumentMoniker": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Build_class.csproj",
+              "RelativeDocumentMoniker": "Build_class\\Build_class.csproj",
+              "ToolTip": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Build_class.csproj",
+              "RelativeToolTip": "Build_class\\Build_class.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-15T17:46:45.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Category.cs",
+              "RelativeDocumentMoniker": "Build_class\\Category.cs",
+              "ToolTip": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Category.cs",
+              "RelativeToolTip": "Build_class\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T17:41:14.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Program.cs",
+              "RelativeDocumentMoniker": "Build_class\\Program.cs",
+              "ToolTip": "D:\\UEH\\K\u00EC 4\\L\u1EADp tr\u00ECnh h\u01B0\u1EDBng \u0111\u1ED1i t\u01B0\u1EE3ng\\Build_class\\Build_class\\Program.cs",
+              "RelativeToolTip": "Build_class\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T17:39:52.041Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
