@@ -33,7 +33,6 @@ namespace Project_OOP
                 Console.WriteLine("Trạng thái: Đã xác thực");
             }
 
-            // tái sử dụng logic của lớp cha
             base.DisplayContent();
         }
     }
