@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using System;
 
 namespace Project_OOP
@@ -8,26 +7,24 @@ namespace Project_OOP
     {
         private string _department;
         private int _postsCount;
-
+        public string Department { get; set; }
+        public int PostsCount { get; set; }
         public Reporter() : base() { }
-
         public Reporter(string id, string fullName, string email, string department)
             : base(id, fullName, email)
         {
-            this._department = department;
-            this._postsCount = 0;
+            this.Department = department; 
+            this.PostsCount = 0;          
         }
-
         public void UpdatePostCount()
         {
-            this._postsCount = this._postsCount + 1;
+            this.PostsCount = this.PostsCount + 1;
         }
-
         public override void ShowInfo()
         {
             Console.WriteLine("[PHÓNG VIÊN]");
-            Console.WriteLine("Tên: " + this._fullName + " | Phòng ban: " + this._department);
-            Console.WriteLine("Số lượng bài viết đã thực hiện: " + this._postsCount);
+            Console.WriteLine("Tên: " + this.FullName + " | Phòng ban: " + this.Department);
+            Console.WriteLine("Số lượng bài viết đã thực hiện: " + this.PostsCount);
             Console.WriteLine("-------------------------");
         }
     }
