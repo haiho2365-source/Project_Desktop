@@ -8,23 +8,6 @@ namespace Project_OOP
         protected string _id;
         protected string _fullName;
         protected string _email;
-        public string Id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
-
-        public string FullName
-        {
-            get { return _fullName; }
-            set { _fullName = value; }
-        }
-
-        public string Email
-        {
-            get { return _email; }
-            set { _email = value; }
-        }
         public Person()
         {
         }
@@ -33,6 +16,23 @@ namespace Project_OOP
             this._id = id;
             this._fullName = fullName;
             this._email = email;
+        }
+        public string Id
+        {
+            get { return this._id; }
+            set { this._id = value; }
+        }
+
+        public string FullName
+        {
+            get { return this._fullName; }
+            set { this._fullName = value; }
+        }
+
+        public string Email
+        {
+            get { return this._email; }
+            set { this._email = value; }
         }
         public abstract void ShowInfo();
     }
