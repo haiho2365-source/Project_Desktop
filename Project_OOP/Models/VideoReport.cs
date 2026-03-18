@@ -1,7 +1,6 @@
-﻿using Project_OOP;
+using Project_OOP;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,21 +23,33 @@ namespace Project_OOP
 
         public double Duration
         {
-            get { return _duration; }
-            set { _duration = value; }
+            get { return this._duration; }
+            set 
+            {
+                if (value > 0)
+                {
+                    this._duration = value;
+                }
+            }
         }
 
         public string Resolution
         {
-            get { return _resolution; }
-            set { _resolution = value; }
+            get { return this._resolution; }
+            set 
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    this._resolution = value;
+                }
+            }
         }
 
         public override void DisplayContent()
         {
             Console.WriteLine("Đang phát video...");
-            Console.WriteLine("Độ phân giải: " + _resolution);
-            Console.WriteLine("Thời lượng: " + _duration + " phút");
+            Console.WriteLine("Độ phân giải: " + Resolution);
+            Console.WriteLine("Thời lượng: " + Duration + " phút");
         }
     }
 }
