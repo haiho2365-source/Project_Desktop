@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,30 +24,48 @@ namespace Project_OOP
 
         public string Id
         {
-            get { return _id; }
-            set { _id = value; }
+            get { return this._id; }
+            set 
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                   this._id = value;
+                }
+            }
         }
 
         public string Title
         {
-            get { return _title; }
-            set { _title = value; }
+            get { return this._title; }
+            set 
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    this._title = value;
+                }
+            }
         }
 
         public DateTime PublishDate
         {
-            get { return _publishDate; }
-            set { _publishDate = value; }
+            get { return this._publishDate; }
+            set
+            {
+                if (value <= DateTime.Now)
+                {
+                    this._publishDate = value;
+                }
+            }
         }
 
         public int ViewCount
         {
-            get { return _viewCount; }
+            get { return this._viewCount; }
         }
 
         public void IncrementView()
         {
-            _viewCount = _viewCount + 1;
+            this._viewCount++;
         }
 
         public abstract void DisplayContent();
