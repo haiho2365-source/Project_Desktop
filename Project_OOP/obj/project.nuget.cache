@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZGSLN31GTlk=",
+  "dgSpecHash": "Qt0+IxO/P0w=",
   "success": true,
-  "projectFilePath": "D:\\UEH\\Kì 4\\Lập trình hướng đối tượng\\Project_OOP\\Project_OOP\\Project_OOP.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\ACER\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.25\\microsoft.windowsdesktop.app.ref.8.0.25.nupkg.sha512",
-    "C:\\Users\\ACER\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.25\\microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
-    "C:\\Users\\ACER\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.25\\microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512",
-    "C:\\Users\\ACER\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.25\\microsoft.netcore.app.host.win-x64.8.0.25.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\BÀI HỌC\\Lập trình hướng đối tượng\\Project_OOP\\Project_OOP\\Project_OOP.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
