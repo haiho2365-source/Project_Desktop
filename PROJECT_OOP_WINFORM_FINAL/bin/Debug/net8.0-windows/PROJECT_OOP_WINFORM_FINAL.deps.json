@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PROJECT_OOP_WINFORM_FINAL/1.0.0": {
+        "dependencies": {
+          "Project_OOP": "1.0.0"
+        },
+        "runtime": {
+          "PROJECT_OOP_WINFORM_FINAL.dll": {}
+        }
+      },
+      "Project_OOP/1.0.0": {
+        "runtime": {
+          "Project_OOP.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PROJECT_OOP_WINFORM_FINAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Project_OOP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

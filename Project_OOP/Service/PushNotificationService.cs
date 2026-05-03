@@ -1,15 +1,10 @@
-﻿using System;
+﻿using Project_OOP;
 
-namespace Project_OOP
+public class PushNotificationService : INotificationService
 {
-    public class PushNotificationService : INotificationService
+    public void SendNotification(Person recipient, string message)
     {
-        public void SendNotification(Person recipient, string message)
-        {
-            string userEmail = recipient.Email;
-
-            string formattedMessage = "[Popup] Hiển thị trên màn hình của: " + userEmail + " | Nội dung: " + message;
-            Console.WriteLine(formattedMessage);
-        }
+        string logMessage = "Đã gửi Push Notification tới thiết bị của: " + recipient.FullName + " - Nội dung: " + message;
+        Logger.Log(logMessage);
     }
 }

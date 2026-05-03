@@ -1,15 +1,10 @@
-﻿using System;
+﻿using Project_OOP;
 
-namespace Project_OOP
+public class EmailService : INotificationService
 {
-    public class EmailService : INotificationService
+    public void SendNotification(Person recipient, string message)
     {
-        public void SendNotification(Person recipient, string message)
-        {
-            string userEmail = recipient.Email;
-
-            string formattedMessage = "[Email] Đang gửi thư tới: " + userEmail + " | Nội dung: " + message;
-            Console.WriteLine(formattedMessage);
-        }
+        string logMessage = "Đã gửi Email tới: " + recipient.Email + " - Nội dung: " + message;
+        Logger.Log(logMessage);
     }
 }
