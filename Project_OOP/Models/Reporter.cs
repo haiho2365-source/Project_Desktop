@@ -8,7 +8,7 @@ namespace Project_OOP
         private string _department;
         private int _postsCount;
         private string _password; 
-
+        
         public Reporter() : base()
         {
         }
@@ -39,20 +39,14 @@ namespace Project_OOP
             set { this._password = value; }
         }
 
-        public bool CheckPassword(string inputPassword)
+        public bool CheckPassword(string inputPass)
         {
-            bool isMatched = false;
-
-            if (this._password == inputPassword)
+            bool isCorrect = false;
+            if (this._password == inputPass)
             {
-                isMatched = true;
+                isCorrect = true;
             }
-            else
-            {
-                isMatched = false;
-            }
-
-            return isMatched;
+            return isCorrect;
         }
 
         public void UpdatePostCount()
@@ -63,7 +57,9 @@ namespace Project_OOP
         public override void ShowInfo()
         {
             Console.WriteLine("[PHÓNG VIÊN]");
+
             string info = "Tên: " + this.FullName + " | Phòng ban: " + this.Department;
+            
             Console.WriteLine(info);
             Console.WriteLine("Số lượng bài viết đã thực hiện: " + this.PostsCount.ToString());
             Console.WriteLine("-------------------------");
