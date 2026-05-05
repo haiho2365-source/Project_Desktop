@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj": {}
+    "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj": {
+    "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj",
         "projectName": "Project_OOP",
-        "projectPath": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\obj\\",
         "projectStyle": "PackageReference",
@@ -87,14 +87,14 @@
         }
       }
     },
-    "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj": {
+    "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj",
         "projectName": "PROJECT_OOP_WINFORM_FINAL",
-        "projectPath": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -115,8 +115,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj"
+              "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj": {
+                "projectPath": "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj"
               }
             }
           }

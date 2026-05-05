@@ -22,3 +22,4 @@ C:\Users\ADMIN\Source\Repos\Project_OOP\PROJECT_OOP_WINFORM_FINAL\obj\Debug\net8
 C:\Users\ADMIN\Source\Repos\Project_OOP\PROJECT_OOP_WINFORM_FINAL\obj\Debug\net8.0-windows\PROJECT_OOP_WINFORM_FINAL.pdb
 C:\Users\ADMIN\Source\Repos\Project_OOP\PROJECT_OOP_WINFORM_FINAL\obj\Debug\net8.0-windows\PROJECT_OOP_WINFORM_FINAL.genruntimeconfig.cache
 C:\Users\ADMIN\Source\Repos\Project_OOP\PROJECT_OOP_WINFORM_FINAL\obj\Debug\net8.0-windows\ref\PROJECT_OOP_WINFORM_FINAL.dll
+C:\Users\ADMIN\source\repos\Project_OOP\PROJECT_OOP_WINFORM_FINAL\obj\Debug\net8.0-windows\PROJECT_OOP_WINFORM_FINAL.Login.resources

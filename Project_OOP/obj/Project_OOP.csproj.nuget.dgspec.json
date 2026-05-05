@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj": {}
+    "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj": {
+    "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj",
         "projectName": "Project_OOP",
-        "projectPath": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\obj\\",
         "projectStyle": "PackageReference",

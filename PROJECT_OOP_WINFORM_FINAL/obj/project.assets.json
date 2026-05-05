@@ -33,9 +33,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj",
       "projectName": "PROJECT_OOP_WINFORM_FINAL",
-      "projectPath": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj",
+      "projectPath": "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\obj\\",
       "projectStyle": "PackageReference",
@@ -58,8 +58,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj": {
-              "projectPath": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj"
+            "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj"
             }
           }
         }
