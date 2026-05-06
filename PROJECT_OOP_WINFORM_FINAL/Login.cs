@@ -7,6 +7,7 @@ namespace PROJECT_OOP_WINFORM_FINAL
 {
     public partial class Login : Form
     {
+        private Database _database = new Database();
         private UserManager _userManager;
         private int _selectedRole = 0;
 
@@ -19,20 +20,34 @@ namespace PROJECT_OOP_WINFORM_FINAL
 
         private void InitializeMockData()
         {
-
-            Admin adminAccount = new Admin("AD01", "Admin", "admin@ueh.edu.vn", "123", "Manager");
+            Admin adminAccount = new Admin("AD01", "Admin User", "admin@ueh.edu.vn", "123456", "Manager");
             _userManager.AddUser(adminAccount);
 
-            Reporter reporterAccount = new Reporter("RP01", "Reporter", "reporter@ueh.edu.vn", "News");
+            Reporter reporterAccount = new Reporter("RP01", "Reporter User", "reporter@ueh.edu.vn", "News Dept", "123");
             _userManager.AddUser(reporterAccount);
 
-            Subscriber subscriberAccount = new Subscriber("SB01", "Subscriber", "sub@ueh.edu.vn", true);
+            Subscriber subscriberAccount = new Subscriber("SB01", "Subscriber User", "sub@ueh.edu.vn", true, "123");
             _userManager.AddUser(subscriberAccount);
+            _database.AddSubscriber(subscriberAccount);
         }
 
-        private void button1_Click(object sender, EventArgs e) { _selectedRole = 1; SwitchPanel(); }
-        private void button2_Click(object sender, EventArgs e) { _selectedRole = 2; SwitchPanel(); }
-        private void button3_Click(object sender, EventArgs e) { _selectedRole = 3; SwitchPanel(); }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _selectedRole = 1;
+            SwitchPanel();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _selectedRole = 2;
+            SwitchPanel();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            _selectedRole = 3;
+            SwitchPanel();
+        }
 
         private void SwitchPanel()
         {
@@ -42,7 +57,7 @@ namespace PROJECT_OOP_WINFORM_FINAL
 
             txtEmail.Clear();
             txtPassword.Clear();
-            txtPassword.Enabled = true; 
+            txtPassword.Enabled = true;
         }
 
         private void lblQuayLai_Click_1(object sender, EventArgs e)
@@ -59,7 +74,7 @@ namespace PROJECT_OOP_WINFORM_FINAL
 
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Vui lòng nhập đủ Email và Mật khẩu!");
+                MessageBox.Show("Vui lòng nhập đầy đủ Email và Mật khẩu", "Yêu cầu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -67,38 +82,72 @@ namespace PROJECT_OOP_WINFORM_FINAL
 
             if (userFound == null)
             {
-                MessageBox.Show("Tài khoản không tồn tại!");
+                foreach (Subscriber s in _database.Subscribers)
+                {
+                    if (s.Email.Equals(email, StringComparison.OrdinalIgnoreCase))
+                    {
+                        userFound = s;
+                        break;
+                    }
+                }
+            }
+
+            if (userFound == null)
+            {
+                MessageBox.Show("Tài khoản không tồn tại trong hệ thống", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             bool isPasswordCorrect = false;
+            string userRoleName = "";
 
             if (userFound is Admin admin)
             {
-                if (admin.CheckPassword(password)) isPasswordCorrect = true;
+                isPasswordCorrect = admin.CheckPassword(password);
+                userRoleName = "Quản trị viên";
             }
-            else
+            else if (userFound is Reporter reporter)
             {
-                if (password == "123") isPasswordCorrect = true;
+                isPasswordCorrect = reporter.CheckPassword(password);
+                userRoleName = "Phóng viên";
+            }
+            else if (userFound is Subscriber sub)
+            {
+                isPasswordCorrect = sub.CheckPassword(password);
+                userRoleName = "Độc giả";
             }
 
             if (isPasswordCorrect)
             {
-                if ((_selectedRole == 1 && userFound is Admin) ||
-                    (_selectedRole == 2 && userFound is Reporter) ||
-                    (_selectedRole == 3 && userFound is Subscriber))
+                bool isRightRole = (_selectedRole == 1 && userFound is Admin) ||
+                                   (_selectedRole == 2 && userFound is Reporter) ||
+                                   (_selectedRole == 3 && userFound is Subscriber);
+
+                if (isRightRole)
                 {
-                    MessageBox.Show("Đăng nhập thành công!");
+                    MessageBox.Show($"MẬT KHẨU CHÍNH XÁC. Chào mừng {userRoleName} {userFound.FullName} đã đăng nhập thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Sai vai trò đăng nhập!");
+                    MessageBox.Show($"MẬT KHẨU ĐÚNG. Nhưng tài khoản này là {userRoleName} không khớp với quyền bạn đã chọn lúc đầu", "Sai quyền", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Sai mật khẩu!");
+                MessageBox.Show("MẬT KHẨU SAI. Vui lòng kiểm tra lại mật khẩu của bạn", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
+        }
+
+        private void pnlChonQuyen_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Register frmRegister = new Register(this._database);
+            this.Hide();
+            frmRegister.ShowDialog();
+            this.Show();
         }
     }
 }
