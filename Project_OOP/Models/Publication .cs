@@ -12,14 +12,18 @@ namespace Project_OOP
         protected string _title;
         protected DateTime _publishDate;
         protected int _viewCount = 0;
-
-        public Publication() { }
+        protected bool _isApproved;
+        public Publication()
+        {
+            this._isApproved = false;
+        }
 
         public Publication(string id, string title, DateTime publishDate)
         {
             this._id = id;
             this._title = title;
             this._publishDate = publishDate;
+           
         }
 
         public string Id
@@ -58,6 +62,11 @@ namespace Project_OOP
             }
         }
 
+        public bool IsApproved
+        {
+            get { return this._isApproved; }
+            set { this._isApproved = value; }
+        }
         public int ViewCount
         {
             get { return this._viewCount; }

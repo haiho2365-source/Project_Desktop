@@ -101,6 +101,7 @@
             btnPostMgr.TabIndex = 5;
             btnPostMgr.Text = "Quản lý\r\nbài báo";
             btnPostMgr.UseVisualStyleBackColor = false;
+            btnPostMgr.Click += btnPostMgr_Click;
             btnPostMgr.MouseEnter += btnNav_MouseEnter;
             btnPostMgr.MouseLeave += btnNav_MouseLeave;
             // 

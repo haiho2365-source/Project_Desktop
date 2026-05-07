@@ -35,9 +35,8 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            btnAdd = new Button();
             btnDelete = new Button();
-            button3 = new Button();
+            btnEdit = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvUsers).BeginInit();
             SuspendLayout();
             // 
@@ -100,17 +99,6 @@
             label3.TabIndex = 6;
             label3.Text = "Email";
             // 
-            // btnAdd
-            // 
-            btnAdd.BackColor = Color.White;
-            btnAdd.FlatStyle = FlatStyle.Flat;
-            btnAdd.Location = new Point(54, 60);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(112, 34);
-            btnAdd.TabIndex = 7;
-            btnAdd.Text = "Thêm";
-            btnAdd.UseVisualStyleBackColor = false;
-            // 
             // btnDelete
             // 
             btnDelete.BackColor = Color.White;
@@ -121,24 +109,25 @@
             btnDelete.TabIndex = 8;
             btnDelete.Text = "Xoá";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
-            // button3
+            // btnEdit
             // 
-            button3.BackColor = Color.White;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(482, 60);
-            button3.Name = "button3";
-            button3.Size = new Size(112, 34);
-            button3.TabIndex = 9;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = false;
+            btnEdit.BackColor = Color.White;
+            btnEdit.FlatStyle = FlatStyle.Flat;
+            btnEdit.Location = new Point(75, 60);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(112, 34);
+            btnEdit.TabIndex = 9;
+            btnEdit.Text = "Sửa";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
             // 
             // UC_UserManagement
             // 
             AutoScaleMode = AutoScaleMode.None;
-            Controls.Add(button3);
+            Controls.Add(btnEdit);
             Controls.Add(btnDelete);
-            Controls.Add(btnAdd);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -163,8 +152,7 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Button btnAdd;
         private Button btnDelete;
-        private Button button3;
+        private Button btnEdit;
     }
 }

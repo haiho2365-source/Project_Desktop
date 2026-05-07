@@ -1,4 +1,4 @@
-﻿using Project_OOP; // Để Form nhận diện được các class Database, UserManager...
+﻿using Project_OOP; 
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -82,7 +82,14 @@ namespace PROJECT_OOP_WINFORM_FINAL
         private void btnPostMgr_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            UC_NewsManager uc = new UC_NewsManager(this._pubManager);
 
+            this.panel2.Controls.Clear();
+
+            this.panel2.Controls.Add(uc);
+            uc.Dock = DockStyle.Fill;
+
+            uc.BringToFront();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

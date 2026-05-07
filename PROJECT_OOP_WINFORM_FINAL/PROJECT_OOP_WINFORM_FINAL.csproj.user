@@ -16,6 +16,9 @@
     <Compile Update="Report_screen.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UC_NewsManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UC_UserManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>

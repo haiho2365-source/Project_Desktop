@@ -10,15 +10,52 @@ public class UserManager
         _userList = new List<Person>();
     }
 
-    public void AddUser(Person user)
+    public bool AddUser(Person newUser)
     {
-        _userList.Add(user);
+        for (int i = 0; i < this._userList.Count; i = i + 1)
+        {
+            Person existingUser = this._userList[i];
+            if (existingUser.Id == newUser.Id)
+            {
+                return false; 
+            }
+        }
+        this._userList.Add(newUser);
+        return true;
+    }
+
+    public bool DeleteUser(string id)
+    {
+        for (int i = 0; i < this._userList.Count; i = i + 1)
+        {
+            if (this._userList[i].Id == id)
+            {
+                this._userList.RemoveAt(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool UpdateUser(string id, string newName, string newEmail)
+    {
+        for (int i = 0; i < this._userList.Count; i = i + 1)
+        {
+            if (this._userList[i].Id == id)
+            {
+                this._userList[i].FullName = newName;
+                this._userList[i].Email = newEmail;
+                return true;
+            }
+        }
+        return false;
     }
 
     public Person FindUser(string email)
     {
-        foreach (Person p in _userList)
+        for (int i = 0; i < this._userList.Count; i = i + 1)
         {
+            Person p = this._userList[i];
             if (p.Email == email)
             {
                 return p;
@@ -29,7 +66,7 @@ public class UserManager
 
     public bool Login(string email, string password)
     {
-        Person user = FindUser(email);
+        Person user = this.FindUser(email);
         if (user != null)
         {
             if (user is Admin admin)
@@ -66,6 +103,6 @@ public class UserManager
 
     public void SetUserList(List<Person> loadedList)
     {
-        _userList = loadedList;
+        this._userList = loadedList;
     }
 }
