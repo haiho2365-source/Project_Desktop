@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic; // Bắt buộc phải có để dùng List
+using System.Collections.Generic;
 using System.Windows.Forms;
 using Project_OOP;
 

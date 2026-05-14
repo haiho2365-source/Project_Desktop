@@ -23,12 +23,10 @@ namespace PROJECT_OOP_WINFORM_FINAL
             this._pubManager = pMgr;
             this._currentUser = currentUser;
 
-            // Đổi tiêu đề cho ngầu
             if (_currentUser != null)
                 this.Text = "Kênh Đọc Tin Tức - Xin chào " + _currentUser.FullName;
         }
 
-        // Hàm hỗ trợ hiển thị UC vào pnlContent
         private void ShowFunction(UserControl uc)
         {
             panel2.Controls.Clear();
@@ -37,14 +35,13 @@ namespace PROJECT_OOP_WINFORM_FINAL
             uc.BringToFront();
         }
 
-        // --- Hiệu ứng đổi màu nút bấm ---
         private void ActivateButton(object btnSender)
         {
             if (btnSender != null && _currentActiveButton != (Button)btnSender)
             {
                 DeactivateButton();
                 _currentActiveButton = (Button)btnSender;
-                _currentActiveButton.BackColor = Color.FromArgb(255, 140, 0); // Màu cam khi chọn
+                _currentActiveButton.BackColor = Color.FromArgb(255, 140, 0); 
                 _currentActiveButton.ForeColor = Color.White;
             }
         }
@@ -53,25 +50,19 @@ namespace PROJECT_OOP_WINFORM_FINAL
         {
             if (_currentActiveButton != null)
             {
-                // Chỉnh lại màu xanh gốc của panel1 cho khớp với thiết kế của bạn
                 _currentActiveButton.BackColor = Color.FromArgb(0, 128, 128);
                 _currentActiveButton.ForeColor = Color.White;
             }
         }
 
-        // --- Xử lý sự kiện các nút ---
-
-        // 1. Nút Xem bản tin (btnPostWatch)
         private void btnPostWatch_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
 
-            // UC_NewsManager sẽ tự động nhận diện quyền Độc giả để ẩn nút Duyệt/Xoá
             UC_NewsManager ucNews = new UC_NewsManager(this._pubManager, this._currentUser);
             ShowFunction(ucNews);
         }
 
-        // 2. Nút Hồ sơ (btnProfile)
         private void btnProfile_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
@@ -103,10 +94,9 @@ namespace PROJECT_OOP_WINFORM_FINAL
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Close(); // Đóng form, tự động quay về form Login
+            this.Close(); 
         }
 
-        // Mở sẵn bản tin khi vừa vào Form
         private void User_Load(object sender, EventArgs e)
         {
             btnPostWatch_Click(btnPostWatch, EventArgs.Empty);

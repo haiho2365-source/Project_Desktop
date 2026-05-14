@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
-using Project_OOP; // Nhớ thêm dòng này để gọi được các class Person, Admin...
-
+using Project_OOP; 
 namespace PROJECT_OOP_WINFORM_FINAL
 {
     public partial class UC_Profile : UserControl
     {
-        // Sử dụng Lớp cha (Person) để chứa được mọi loại tài khoản
         private Person _user;
 
         public UC_Profile(Person inputUser)

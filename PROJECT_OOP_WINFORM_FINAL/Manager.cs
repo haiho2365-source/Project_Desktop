@@ -20,10 +20,9 @@ namespace PROJECT_OOP_WINFORM_FINAL
             this._database = db;
             this._userManager = uMgr;
             this._pubManager = pMgr;
-            this._currentUser = currentUser; // Lưu thông tin người dùng đang đăng nhập
+            this._currentUser = currentUser; 
         }
 
-        // Hàm hỗ trợ hiển thị UserControl vào Panel2
         private void ShowFunction(UserControl uc)
         {
             panel2.Controls.Clear();
@@ -96,7 +95,7 @@ namespace PROJECT_OOP_WINFORM_FINAL
             if (this._currentUser != null)
             {
                 UC_Profile ucProfile = new UC_Profile(this._currentUser);
-                ShowFunction(ucProfile); // Dùng ShowFunction cho gọn code
+                ShowFunction(ucProfile); 
             }
             else
             {
@@ -111,7 +110,6 @@ namespace PROJECT_OOP_WINFORM_FINAL
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            // Có thể bỏ trống nếu không sử dụng
         }
     }
 }

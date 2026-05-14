@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Xml.Serialization; // Đổi thư viện sang XML
+using System.Xml.Serialization; 
 
 public class DataStorageUtility
 {
