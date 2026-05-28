@@ -185,6 +185,7 @@
             button6.TabIndex = 3;
             button6.Text = "Đăng ký tài khoản";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button3
             // 
@@ -250,8 +251,8 @@
             BackColor = Color.White;
             ClientSize = new Size(1021, 553);
             Controls.Add(pnlLeft);
-            Controls.Add(pnlNhapLieu);
             Controls.Add(pnlChonQuyen);
+            Controls.Add(pnlNhapLieu);
             Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Login";

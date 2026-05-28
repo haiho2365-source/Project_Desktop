@@ -103,6 +103,7 @@
             txtConfirmPassword.BorderStyle = BorderStyle.FixedSingle;
             txtConfirmPassword.Location = new Point(274, 281);
             txtConfirmPassword.Name = "txtConfirmPassword";
+            txtConfirmPassword.PasswordChar = '*';
             txtConfirmPassword.Size = new Size(276, 34);
             txtConfirmPassword.TabIndex = 16;
             // 

@@ -18,7 +18,9 @@ namespace Project_OOP
                 return false;
             }
 
+            
             Subscriber newUser = new Subscriber(id, fullName, email, false, password);
+
             this._database.AddSubscriber(newUser);
 
             return true;

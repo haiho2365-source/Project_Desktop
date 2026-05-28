@@ -27,9 +27,13 @@ namespace PROJECT_OOP_WINFORM_FINAL
             Project_OOP.Reporter reporterAccount = new Project_OOP.Reporter("RP01", "Reporter User", "reporter@ueh.edu.vn", "News Dept", "123");
             _userManager.AddUser(reporterAccount);
 
-            Subscriber subscriberAccount = new Subscriber("SB01", "Subscriber User", "sub@ueh.edu.vn", true, "123");
-            _userManager.AddUser(subscriberAccount);
-            _database.AddSubscriber(subscriberAccount);
+            if (_database.Subscribers != null)
+            {
+                foreach (Subscriber sub in _database.Subscribers)
+                {
+                    _userManager.AddUser(sub);
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,18 +87,6 @@ namespace PROJECT_OOP_WINFORM_FINAL
 
             if (userFound == null)
             {
-                foreach (Subscriber s in _database.Subscribers)
-                {
-                    if (s.Email.Equals(email, StringComparison.OrdinalIgnoreCase))
-                    {
-                        userFound = s;
-                        break;
-                    }
-                }
-            }
-
-            if (userFound == null)
-            {
                 MessageBox.Show("Tài khoản không tồn tại trong hệ thống", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -128,18 +120,16 @@ namespace PROJECT_OOP_WINFORM_FINAL
                 {
                     MessageBox.Show($"MẬT KHẨU CHÍNH XÁC. Chào mừng {userRoleName} {userFound.FullName} đã đăng nhập thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    if (_selectedRole == 1) 
+                    if (_selectedRole == 1)
                     {
                         Manager frmManager = new Manager(this._database, this._userManager, this._pubManager, userFound);
-
                         this.Hide();
                         frmManager.ShowDialog();
-                        this.Show(); 
+                        this.Show();
                     }
                     else if (_selectedRole == 2)
                     {
                         Report_screen frmReport_screen = new Report_screen(this._pubManager, userFound);
-
                         this.Hide();
                         frmReport_screen.ShowDialog();
                         this.Show();
@@ -147,11 +137,8 @@ namespace PROJECT_OOP_WINFORM_FINAL
                     else if (_selectedRole == 3)
                     {
                         User frmUser = new User(this._database, this._userManager, this._pubManager, userFound);
-
                         this.Hide();
-
                         frmUser.ShowDialog();
-
                         this.Show();
                     }
                 }
@@ -175,7 +162,31 @@ namespace PROJECT_OOP_WINFORM_FINAL
             Register frmRegister = new Register(this._database);
             this.Hide();
             frmRegister.ShowDialog();
+            SyncUsersFromDatabase();
             this.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Register frmRegister = new Register(this._database);
+            this.Hide();
+            frmRegister.ShowDialog();
+            SyncUsersFromDatabase();
+            this.Show();
+        }
+
+        private void SyncUsersFromDatabase()
+        {
+            if (_database.Subscribers != null)
+            {
+                foreach (Subscriber sub in _database.Subscribers)
+                {
+                    if (_userManager.FindUser(sub.Email) == null)
+                    {
+                        _userManager.AddUser(sub);
+                    }
+                }
+            }
         }
     }
 }
