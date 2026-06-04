@@ -92,13 +92,16 @@ namespace PROJECT_OOP_WINFORM_FINAL
 
             if (this._currentUser != null)
             {
-                UC_Profile ucProfile = new UC_Profile(this._currentUser);
+                panel2.Controls.Clear();
 
-                this.panel2.Controls.Clear();
+                var frmProfile = new PROJECT_OOP_WINFORM_FINAL.GUI.Profile(this._currentUser);
+                frmProfile.TopLevel = false;
+                frmProfile.FormBorderStyle = FormBorderStyle.None;
+                frmProfile.Dock = DockStyle.Fill;
 
-                ucProfile.Dock = DockStyle.Fill;
-                this.panel2.Controls.Add(ucProfile);
-                ucProfile.BringToFront();
+                panel2.Controls.Add(frmProfile);
+                frmProfile.Show();
+                frmProfile.BringToFront();
             }
             else
             {
@@ -108,13 +111,18 @@ namespace PROJECT_OOP_WINFORM_FINAL
 
         private void btnPostMgr_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender);
+
             panel2.Controls.Clear();
 
-            UC_MyNews ucMyNews = new UC_MyNews(this._pubManager, this._currentUser);
+            var frmMyNews = new PROJECT_OOP_WINFORM_FINAL.GUI.MyNews(this._pubManager, this._currentUser);
+            frmMyNews.TopLevel = false;
+            frmMyNews.FormBorderStyle = FormBorderStyle.None;
+            frmMyNews.Dock = DockStyle.Fill;
 
-            ucMyNews.Dock = DockStyle.Fill;
-
-            panel2.Controls.Add(ucMyNews);
+            panel2.Controls.Add(frmMyNews);
+            frmMyNews.Show();
+            frmMyNews.BringToFront();
 
         }
 

@@ -94,8 +94,16 @@ namespace PROJECT_OOP_WINFORM_FINAL
 
             if (this._currentUser != null)
             {
-                UC_Profile ucProfile = new UC_Profile(this._currentUser);
-                ShowFunction(ucProfile); 
+                panel2.Controls.Clear();
+
+                var frmProfile = new PROJECT_OOP_WINFORM_FINAL.GUI.Profile(this._currentUser);
+                frmProfile.TopLevel = false;
+                frmProfile.FormBorderStyle = FormBorderStyle.None;
+                frmProfile.Dock = DockStyle.Fill;
+
+                panel2.Controls.Add(frmProfile);
+                frmProfile.Show();
+                frmProfile.BringToFront();
             }
             else
             {

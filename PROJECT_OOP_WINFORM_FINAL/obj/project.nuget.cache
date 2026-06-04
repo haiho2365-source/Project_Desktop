@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z2NwnllgZlM=",
+  "dgSpecHash": "aLC9QFCmdPE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\Source\\Repos\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.27\\microsoft.windowsdesktop.app.ref.8.0.27.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.27\\microsoft.netcore.app.ref.8.0.27.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.27\\microsoft.aspnetcore.app.ref.8.0.27.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.27\\microsoft.netcore.app.host.win-x64.8.0.27.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\desktop\\Project_OOP\\PROJECT_OOP_WINFORM_FINAL\\PROJECT_OOP_WINFORM_FINAL.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

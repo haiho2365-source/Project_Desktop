@@ -1,3 +1,5 @@
+using PROJECT_OOP_WINFORM_FINAL.GUI;
+
 namespace PROJECT_OOP_WINFORM_FINAL
 {
     internal static class Program
