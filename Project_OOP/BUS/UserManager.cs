@@ -7,7 +7,7 @@ using System.Linq;
 public class UserManager
 {
     private List<Person> _userList;
-    private string _connectionString = "Server=.;Database=Project_Desktop;Trusted_Connection=True;TrustServerCertificate=True;";
+    private string _connectionString = "Server=LAPTOP-2C4LFE1O\\SQLEXPRESS;Database=Project_Desktop;Trusted_Connection=True;TrustServerCertificate=True;";
 
     public UserManager()
     {

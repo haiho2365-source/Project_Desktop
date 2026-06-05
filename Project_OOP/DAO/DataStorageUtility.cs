@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 public class DataStorageUtility
 {
-    private string _connectionString = "Server=.;Database=Project_Desktop;Trusted_Connection=True;TrustServerCertificate=True;";
+    private string _connectionString = "Server=LAPTOP-2C4LFE1O\\SQLEXPRESS;Database=Project_Desktop;Trusted_Connection=True;TrustServerCertificate=True;";
 
     public bool SaveData<T>(T dataToSave, string filePath)
     {

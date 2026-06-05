@@ -10,7 +10,7 @@ namespace Project_OOP
         private List<Subscriber> _subscribers = new List<Subscriber>();
         private List<Admin> _admins = new List<Admin>();
         private DataStorageUtility _storage = new DataStorageUtility();
-        private string _connectionString = "Server=.;Database=Project_Desktop;Trusted_Connection=True;TrustServerCertificate=True;";
+        private string _connectionString = "Server=LAPTOP-2C4LFE1O\\SQLEXPRESS;Database=Project_Desktop;Trusted_Connection=True;TrustServerCertificate=True;";
 
         public Database()
         {

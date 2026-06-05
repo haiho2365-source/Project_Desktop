@@ -1,6 +1,7 @@
 ﻿using Project_OOP;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PROJECT_OOP_WINFORM_FINAL
@@ -11,12 +12,14 @@ namespace PROJECT_OOP_WINFORM_FINAL
         private UserManager _userManager;
         private int _selectedRole = 0;
         private PublicationManager _pubManager;
+        private Button _btnForgotPassword = null!;
 
         public Login()
         {
             try
             {
                 InitializeComponent();
+                CreateForgotPasswordButton();
                 _database = new Database();
                 _userManager = new UserManager();
                 _pubManager = new PublicationManager();
@@ -27,6 +30,23 @@ namespace PROJECT_OOP_WINFORM_FINAL
                 MessageBox.Show(ex.Message, "Lỗi Kết Nối Hệ Thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(0);
             }
+        }
+
+        private void CreateForgotPasswordButton()
+        {
+            _btnForgotPassword = new Button();
+            _btnForgotPassword.BackColor = Color.White;
+            _btnForgotPassword.FlatStyle = FlatStyle.Flat;
+            _btnForgotPassword.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            _btnForgotPassword.ForeColor = Color.FromArgb(0, 114, 118);
+            _btnForgotPassword.Location = new Point(194, 429);
+            _btnForgotPassword.Name = "btnForgotPassword";
+            _btnForgotPassword.Size = new Size(350, 42);
+            _btnForgotPassword.TabIndex = 13;
+            _btnForgotPassword.Text = "QUÊN MẬT KHẨU?";
+            _btnForgotPassword.UseVisualStyleBackColor = false;
+            _btnForgotPassword.Click += btnForgotPassword_Click;
+            pnlNhapLieu.Controls.Add(_btnForgotPassword);
         }
 
         private void InitializeMockData()
@@ -183,6 +203,12 @@ namespace PROJECT_OOP_WINFORM_FINAL
             frmRegister.ShowDialog();
             SyncUsersFromDatabase();
             this.Show();
+        }
+
+        private void btnForgotPassword_Click(object? sender, EventArgs e)
+        {
+            GUI.ResetPasswordForm frmResetPassword = new GUI.ResetPasswordForm();
+            frmResetPassword.ShowDialog();
         }
 
         private void SyncUsersFromDatabase()

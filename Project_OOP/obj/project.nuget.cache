@@ -1,18 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "hE89O6reW+0=",
+  "dgSpecHash": "et45m88XVo0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\source\\repos\\Project_OOP\\Project_OOP\\Project_OOP.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\desktop\\Project_OOP\\Project_OOP\\Project_OOP.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ADMIN\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\system.data.sqlclient\\4.9.1\\system.data.sqlclient.4.9.1.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.27\\microsoft.windowsdesktop.app.ref.8.0.27.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.27\\microsoft.netcore.app.ref.8.0.27.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.27\\microsoft.aspnetcore.app.ref.8.0.27.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.27\\microsoft.netcore.app.host.win-x64.8.0.27.nupkg.sha512"
+    "C:\\Users\\LENOVO\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.data.sqlclient\\4.9.1\\system.data.sqlclient.4.9.1.nupkg.sha512"
   ],
   "logs": []
 }

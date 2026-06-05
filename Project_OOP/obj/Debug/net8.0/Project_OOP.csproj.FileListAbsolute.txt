@@ -51,3 +51,11 @@ C:\Users\ADMIN\Source\Repos\Project_OOP\Project_OOP\bin\Debug\net8.0\runtimes\un
 C:\Users\ADMIN\Source\Repos\Project_OOP\Project_OOP\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 C:\Users\ADMIN\Source\Repos\Project_OOP\Project_OOP\obj\Debug\net8.0\Project_OOP.csproj.AssemblyReference.cache
 C:\Users\ADMIN\Source\Repos\Project_OOP\Project_OOP\obj\Debug\net8.0\Project_.038A72CE.Up2Date
+C:\Users\LENOVO\Desktop\desktop\Project_OOP\Project_OOP\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\LENOVO\Desktop\desktop\Project_OOP\Project_OOP\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\LENOVO\Desktop\desktop\Project_OOP\Project_OOP\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\LENOVO\Desktop\desktop\Project_OOP\Project_OOP\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\LENOVO\Desktop\desktop\Project_OOP\Project_OOP\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\LENOVO\Desktop\desktop\Project_OOP\Project_OOP\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\LENOVO\Desktop\desktop\Project_OOP\Project_OOP\obj\Debug\net8.0\Project_OOP.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\desktop\Project_OOP\Project_OOP\obj\Debug\net8.0\Project_.038A72CE.Up2Date
