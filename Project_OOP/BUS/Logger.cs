@@ -9,22 +9,28 @@ namespace Project_OOP
 
         public static void Log(string message)
         {
-            string logEntry = DateTime.Now.ToString() + " - " + message;
+            string logEntry = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + message;
             _logs.Add(logEntry);
         }
 
         public static List<string> GetLogs()
         {
-            return _logs;
+            return _logs.ToList();
         }
 
         public static void PrintLogs()
         {
-            int i;
-            for (i = 0; i < _logs.Count; i++)
-            {
-                Console.WriteLine(_logs[i]);
-            }
+            _logs.ForEach(log => Console.WriteLine(log));
+        }
+
+        public static void ClearLogs()
+        {
+            _logs.Clear();
+        }
+
+        public static List<string> SearchLogs(string keyword)
+        {
+            return _logs.Where(log => log.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0).ToList();
         }
     }
 }
