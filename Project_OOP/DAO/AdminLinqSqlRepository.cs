@@ -9,12 +9,11 @@ namespace Project_OOP
     {
         private readonly string _connectionString = "Server=LAPTOP-2C4LFE1O\\SQLEXPRESS;Database=Project_Desktop;Trusted_Connection=True;TrustServerCertificate=True;";
 
-        public bool TryResetPassword(string id, string fullName, string email, string role, string newPassword)
+        public bool TryResetPassword(string fullName, string email, string role, string newPassword)
         {
             List<DbUserRecord> users = LoadUsers();
 
             DbUserRecord? matchedUser = users.FirstOrDefault(user =>
-                string.Equals(user.Id.Trim(), id.Trim(), StringComparison.OrdinalIgnoreCase) &&
                 string.Equals(user.FullName.Trim(), fullName.Trim(), StringComparison.OrdinalIgnoreCase) &&
                 string.Equals(user.Email.Trim(), email.Trim(), StringComparison.OrdinalIgnoreCase) &&
                 string.Equals(user.Role.Trim(), role.Trim(), StringComparison.OrdinalIgnoreCase));

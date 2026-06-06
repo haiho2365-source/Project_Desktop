@@ -10,7 +10,6 @@ namespace PROJECT_OOP_WINFORM_FINAL.GUI
         private readonly AdminLinqSqlRepository _repository = new AdminLinqSqlRepository();
         private Panel pnlLeft = null!;
         private Panel pnlContent = null!;
-        private TextBox txtId = null!;
         private TextBox txtFullName = null!;
         private TextBox txtEmail = null!;
         private ComboBox cbRole = null!;
@@ -31,14 +30,12 @@ namespace PROJECT_OOP_WINFORM_FINAL.GUI
             Label lblBrandTop = new Label();
             Label lblBrandBottom = new Label();
             Label lblTitle = new Label();
-            Label lblId = new Label();
             Label lblName = new Label();
             Label lblEmail = new Label();
             Label lblRole = new Label();
             Label lblNewPassword = new Label();
             Label lblConfirmPassword = new Label();
 
-            this.txtId = new TextBox();
             this.txtFullName = new TextBox();
             this.txtEmail = new TextBox();
             this.cbRole = new ComboBox();
@@ -72,8 +69,6 @@ namespace PROJECT_OOP_WINFORM_FINAL.GUI
             this.pnlContent.Dock = DockStyle.Fill;
             this.pnlContent.BackColor = Color.White;
             this.pnlContent.Controls.Add(lblTitle);
-            this.pnlContent.Controls.Add(lblId);
-            this.pnlContent.Controls.Add(this.txtId);
             this.pnlContent.Controls.Add(lblName);
             this.pnlContent.Controls.Add(this.txtFullName);
             this.pnlContent.Controls.Add(lblEmail);
@@ -93,36 +88,33 @@ namespace PROJECT_OOP_WINFORM_FINAL.GUI
             lblTitle.Location = new Point(155, 44);
             lblTitle.Text = "ĐẶT LẠI MẬT KHẨU";
 
-            ConfigureLabel(lblId, "Mã người dùng", 95);
-            ConfigureTextBox(this.txtId, 95);
+            ConfigureLabel(lblName, "Họ tên", 110);
+            ConfigureTextBox(this.txtFullName, 110);
 
-            ConfigureLabel(lblName, "Họ tên", 148);
-            ConfigureTextBox(this.txtFullName, 148);
+            ConfigureLabel(lblEmail, "Email", 170);
+            ConfigureTextBox(this.txtEmail, 170);
 
-            ConfigureLabel(lblEmail, "Email", 201);
-            ConfigureTextBox(this.txtEmail, 201);
-
-            ConfigureLabel(lblRole, "Vai trò", 254);
+            ConfigureLabel(lblRole, "Vai trò", 230);
             this.cbRole.DropDownStyle = ComboBoxStyle.DropDownList;
             this.cbRole.Items.Add("Admin");
             this.cbRole.Items.Add("Reporter");
             this.cbRole.Items.Add("Subscriber");
             this.cbRole.SelectedIndex = 0;
-            this.cbRole.Location = new Point(230, 254);
+            this.cbRole.Location = new Point(230, 230);
             this.cbRole.Size = new Size(280, 34);
 
-            ConfigureLabel(lblNewPassword, "Mật khẩu mới", 307);
-            ConfigureTextBox(this.txtNewPassword, 307);
+            ConfigureLabel(lblNewPassword, "Mật khẩu mới", 290);
+            ConfigureTextBox(this.txtNewPassword, 290);
             this.txtNewPassword.PasswordChar = '*';
 
-            ConfigureLabel(lblConfirmPassword, "Xác nhận", 360);
-            ConfigureTextBox(this.txtConfirmPassword, 360);
+            ConfigureLabel(lblConfirmPassword, "Xác nhận", 350);
+            ConfigureTextBox(this.txtConfirmPassword, 350);
             this.txtConfirmPassword.PasswordChar = '*';
 
-            ConfigureButton(this.btnResetPassword, "CẬP NHẬT MẬT KHẨU", Color.FromArgb(0, 114, 118), 230, 425, 280, 46);
+            ConfigureButton(this.btnResetPassword, "CẬP NHẬT MẬT KHẨU", Color.FromArgb(0, 114, 118), 230, 420, 280, 46);
             this.btnResetPassword.Click += btnResetPassword_Click;
 
-            ConfigureButton(this.btnClose, "ĐÓNG", Color.FromArgb(255, 112, 67), 230, 480, 280, 42);
+            ConfigureButton(this.btnClose, "ĐÓNG", Color.FromArgb(255, 112, 67), 230, 475, 280, 42);
             this.btnClose.Click += btnClose_Click;
 
             this.AutoScaleMode = AutoScaleMode.None;
@@ -172,14 +164,13 @@ namespace PROJECT_OOP_WINFORM_FINAL.GUI
 
         private void btnResetPassword_Click(object? sender, EventArgs e)
         {
-            string id = this.txtId.Text.Trim();
             string fullName = this.txtFullName.Text.Trim();
             string email = this.txtEmail.Text.Trim();
             string role = this.cbRole.SelectedItem?.ToString() ?? "";
             string newPassword = this.txtNewPassword.Text.Trim();
             string confirmPassword = this.txtConfirmPassword.Text.Trim();
 
-            if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(email) ||
+            if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(email) ||
                 string.IsNullOrEmpty(role) || string.IsNullOrEmpty(newPassword) || string.IsNullOrEmpty(confirmPassword))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin để xác minh tài khoản.", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -194,7 +185,7 @@ namespace PROJECT_OOP_WINFORM_FINAL.GUI
 
             try
             {
-                bool isSuccess = this._repository.TryResetPassword(id, fullName, email, role, newPassword);
+                bool isSuccess = this._repository.TryResetPassword(fullName, email, role, newPassword);
 
                 if (isSuccess)
                 {

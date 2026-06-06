@@ -2,6 +2,7 @@ using Project_OOP;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PROJECT_OOP_WINFORM_FINAL.GUI
@@ -35,6 +36,12 @@ namespace PROJECT_OOP_WINFORM_FINAL.GUI
             Label lblReceiver = new Label();
             Label lblSubject = new Label();
             Label lblContent = new Label();
+            TableLayoutPanel rootLayout = new TableLayoutPanel();
+            TableLayoutPanel bodyLayout = new TableLayoutPanel();
+            TableLayoutPanel leftLayout = new TableLayoutPanel();
+            TableLayoutPanel rightLayout = new TableLayoutPanel();
+            FlowLayoutPanel listButtonLayout = new FlowLayoutPanel();
+            FlowLayoutPanel formButtonLayout = new FlowLayoutPanel();
 
             this.dgvMessages = new DataGridView();
             this.txtSenderEmail = new TextBox();
@@ -50,81 +57,140 @@ namespace PROJECT_OOP_WINFORM_FINAL.GUI
             ((System.ComponentModel.ISupportInitialize)this.dgvMessages).BeginInit();
             this.SuspendLayout();
 
-            lblTitle.AutoSize = true;
+            rootLayout.ColumnCount = 1;
+            rootLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            rootLayout.Dock = DockStyle.Fill;
+            rootLayout.RowCount = 2;
+            rootLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
+            rootLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+
+            bodyLayout.ColumnCount = 2;
+            bodyLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 58F));
+            bodyLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 42F));
+            bodyLayout.Dock = DockStyle.Fill;
+            bodyLayout.Padding = new Padding(16, 0, 16, 12);
+
+            leftLayout.ColumnCount = 1;
+            leftLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            leftLayout.Dock = DockStyle.Fill;
+            leftLayout.Margin = new Padding(0, 0, 10, 0);
+            leftLayout.RowCount = 2;
+            leftLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            leftLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
+
+            rightLayout.ColumnCount = 2;
+            rightLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
+            rightLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            rightLayout.Dock = DockStyle.Fill;
+            rightLayout.Margin = new Padding(10, 0, 0, 0);
+            rightLayout.RowCount = 5;
+            rightLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 44F));
+            rightLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 44F));
+            rightLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 44F));
+            rightLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            rightLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
+
+            lblTitle.Dock = DockStyle.Fill;
             lblTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             lblTitle.ForeColor = Color.FromArgb(0, 114, 118);
-            lblTitle.Location = new Point(18, 15);
-            lblTitle.Text = "HÒM THƯ QUẢN TRỊ";
+            lblTitle.Padding = new Padding(18, 0, 0, 0);
+            lblTitle.Text = this._currentUser is Admin ? "HÒM THƯ QUẢN TRỊ" : "HÒM THƯ CÁ NHÂN";
+            lblTitle.TextAlign = ContentAlignment.MiddleLeft;
 
             this.dgvMessages.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMessages.BackgroundColor = Color.White;
             this.dgvMessages.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMessages.Location = new Point(18, 58);
+            this.dgvMessages.Dock = DockStyle.Fill;
+            this.dgvMessages.Margin = Padding.Empty;
             this.dgvMessages.MultiSelect = false;
             this.dgvMessages.Name = "dgvMessages";
             this.dgvMessages.ReadOnly = true;
-            this.dgvMessages.RowHeadersWidth = 51;
+            this.dgvMessages.RowHeadersVisible = false;
             this.dgvMessages.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMessages.Size = new Size(560, 225);
             this.dgvMessages.TabIndex = 0;
             this.dgvMessages.CellClick += dgvMessages_CellClick;
 
-            ConfigureLabel(lblSender, "Người gửi", 595, 58);
-            ConfigureTextBox(this.txtSenderEmail, 710, 58);
+            ConfigureFormLabel(lblSender, "Người gửi");
+            ConfigureFormTextBox(this.txtSenderEmail);
+            this.txtSenderEmail.Text = this._currentUser == null ? "" : this._currentUser.Email;
+            this.txtSenderEmail.ReadOnly = !(this._currentUser is Admin);
 
-            ConfigureLabel(lblReceiver, "Người nhận", 595, 102);
-            ConfigureTextBox(this.txtReceiverEmail, 710, 102);
-            this.txtReceiverEmail.Text = this._currentUser == null ? "admin@ueh.edu.vn" : this._currentUser.Email;
+            ConfigureFormLabel(lblReceiver, "Người nhận");
+            ConfigureFormTextBox(this.txtReceiverEmail);
+            this.txtReceiverEmail.Text = this._currentUser is Admin ? "admin@ueh.edu.vn" : "admin@ueh.edu.vn";
 
-            ConfigureLabel(lblSubject, "Tiêu đề", 595, 146);
-            ConfigureTextBox(this.txtSubject, 710, 146);
+            ConfigureFormLabel(lblSubject, "Tiêu đề");
+            ConfigureFormTextBox(this.txtSubject);
 
-            ConfigureLabel(lblContent, "Nội dung", 595, 190);
+            ConfigureFormLabel(lblContent, "Nội dung");
+            lblContent.TextAlign = ContentAlignment.TopLeft;
             this.rtbContent.BorderStyle = BorderStyle.FixedSingle;
-            this.rtbContent.Location = new Point(710, 190);
-            this.rtbContent.Size = new Size(275, 72);
+            this.rtbContent.Dock = DockStyle.Fill;
+            this.rtbContent.Margin = new Padding(0, 0, 0, 8);
 
-            ConfigureButton(this.btnRefresh, "LÀM MỚI", Color.White, Color.Black, 18, 295, 112, 38);
+            ConfigureButton(this.btnRefresh, "LÀM MỚI", Color.White, Color.Black, 106, 38);
             this.btnRefresh.Click += btnRefresh_Click;
 
-            ConfigureButton(this.btnRead, "ĐÃ ĐỌC", Color.FromArgb(76, 175, 80), Color.White, 140, 295, 112, 38);
+            ConfigureButton(this.btnRead, "ĐÃ ĐỌC", Color.FromArgb(76, 175, 80), Color.White, 106, 38);
             this.btnRead.Click += btnRead_Click;
 
-            ConfigureButton(this.btnDelete, "XÓA", Color.FromArgb(198, 40, 40), Color.White, 262, 295, 112, 38);
+            ConfigureButton(this.btnDelete, "XÓA", Color.FromArgb(198, 40, 40), Color.White, 106, 38);
             this.btnDelete.Click += btnDelete_Click;
 
-            ConfigureButton(this.btnSave, "LƯU THƯ", Color.FromArgb(0, 114, 118), Color.White, 710, 275, 130, 42);
+            ConfigureButton(this.btnSave, "LƯU THƯ", Color.FromArgb(0, 114, 118), Color.White, 120, 40);
             this.btnSave.Click += btnSave_Click;
 
-            ConfigureButton(this.btnClear, "XÓA TRẮNG", Color.FromArgb(255, 112, 67), Color.White, 855, 275, 130, 42);
+            ConfigureButton(this.btnClear, "XÓA TRẮNG", Color.FromArgb(255, 112, 67), Color.White, 120, 40);
             this.btnClear.Click += btnClear_Click;
+
+            listButtonLayout.Dock = DockStyle.Fill;
+            listButtonLayout.FlowDirection = FlowDirection.LeftToRight;
+            listButtonLayout.Margin = Padding.Empty;
+            listButtonLayout.Padding = new Padding(0, 9, 0, 0);
+            listButtonLayout.WrapContents = false;
+            listButtonLayout.Controls.Add(this.btnRefresh);
+            listButtonLayout.Controls.Add(this.btnRead);
+            listButtonLayout.Controls.Add(this.btnDelete);
+
+            formButtonLayout.Dock = DockStyle.Fill;
+            formButtonLayout.FlowDirection = FlowDirection.LeftToRight;
+            formButtonLayout.Margin = Padding.Empty;
+            formButtonLayout.Padding = new Padding(0, 8, 0, 0);
+            formButtonLayout.WrapContents = false;
+            formButtonLayout.Controls.Add(this.btnSave);
+            formButtonLayout.Controls.Add(this.btnClear);
+
+            leftLayout.Controls.Add(this.dgvMessages, 0, 0);
+            leftLayout.Controls.Add(listButtonLayout, 0, 1);
+
+            rightLayout.Controls.Add(lblSender, 0, 0);
+            rightLayout.Controls.Add(this.txtSenderEmail, 1, 0);
+            rightLayout.Controls.Add(lblReceiver, 0, 1);
+            rightLayout.Controls.Add(this.txtReceiverEmail, 1, 1);
+            rightLayout.Controls.Add(lblSubject, 0, 2);
+            rightLayout.Controls.Add(this.txtSubject, 1, 2);
+            rightLayout.Controls.Add(lblContent, 0, 3);
+            rightLayout.Controls.Add(this.rtbContent, 1, 3);
+            rightLayout.Controls.Add(formButtonLayout, 0, 4);
+            rightLayout.SetColumnSpan(formButtonLayout, 2);
+
+            bodyLayout.Controls.Add(leftLayout, 0, 0);
+            bodyLayout.Controls.Add(rightLayout, 1, 0);
+            rootLayout.Controls.Add(lblTitle, 0, 0);
+            rootLayout.Controls.Add(bodyLayout, 0, 1);
 
             this.AutoScaleMode = AutoScaleMode.None;
             this.BackColor = Color.White;
             this.ClientSize = new Size(1021, 355);
-            this.Controls.Add(lblTitle);
-            this.Controls.Add(this.dgvMessages);
-            this.Controls.Add(lblSender);
-            this.Controls.Add(this.txtSenderEmail);
-            this.Controls.Add(lblReceiver);
-            this.Controls.Add(this.txtReceiverEmail);
-            this.Controls.Add(lblSubject);
-            this.Controls.Add(this.txtSubject);
-            this.Controls.Add(lblContent);
-            this.Controls.Add(this.rtbContent);
-            this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnRead);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnClear);
+            this.Controls.Add(rootLayout);
             this.Font = new Font("Segoe UI", 10F);
             this.FormBorderStyle = FormBorderStyle.None;
+            this.MinimumSize = new Size(760, 320);
             this.Name = "MailboxForm";
             this.Text = "Hòm thư";
 
             ((System.ComponentModel.ISupportInitialize)this.dgvMessages).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
         }
 
         private static void ConfigureLabel(Label label, string text, int left, int top)
@@ -141,13 +207,29 @@ namespace PROJECT_OOP_WINFORM_FINAL.GUI
             textBox.Size = new Size(275, 34);
         }
 
-        private static void ConfigureButton(Button button, string text, Color backColor, Color foreColor, int left, int top, int width, int height)
+        private static void ConfigureFormLabel(Label label, string text)
+        {
+            label.Dock = DockStyle.Fill;
+            label.Margin = new Padding(0, 0, 8, 8);
+            label.Text = text;
+            label.TextAlign = ContentAlignment.MiddleLeft;
+        }
+
+        private static void ConfigureFormTextBox(TextBox textBox)
+        {
+            textBox.BorderStyle = BorderStyle.FixedSingle;
+            textBox.Dock = DockStyle.Fill;
+            textBox.Margin = new Padding(0, 0, 0, 8);
+            textBox.MinimumSize = new Size(0, 30);
+        }
+
+        private static void ConfigureButton(Button button, string text, Color backColor, Color foreColor, int width, int height)
         {
             button.BackColor = backColor;
             button.FlatStyle = FlatStyle.Flat;
             button.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button.ForeColor = foreColor;
-            button.Location = new Point(left, top);
+            button.Margin = new Padding(0, 0, 10, 0);
             button.Size = new Size(width, height);
             button.Text = text;
             button.UseVisualStyleBackColor = false;
@@ -158,6 +240,16 @@ namespace PROJECT_OOP_WINFORM_FINAL.GUI
             try
             {
                 List<MailboxMessageRecord> messages = this._repository.LoadMailboxMessages();
+
+                if (!(this._currentUser is Admin) && this._currentUser != null)
+                {
+                    messages = messages
+                        .Where(message =>
+                            string.Equals(message.SenderEmail, this._currentUser.Email, StringComparison.OrdinalIgnoreCase) ||
+                            string.Equals(message.ReceiverEmail, this._currentUser.Email, StringComparison.OrdinalIgnoreCase))
+                        .ToList();
+                }
+
                 this.dgvMessages.DataSource = null;
                 this.dgvMessages.DataSource = messages;
 
@@ -195,7 +287,9 @@ namespace PROJECT_OOP_WINFORM_FINAL.GUI
 
         private void btnSave_Click(object? sender, EventArgs e)
         {
-            string senderEmail = this.txtSenderEmail.Text.Trim();
+            string senderEmail = this._currentUser == null || this._currentUser is Admin
+                ? this.txtSenderEmail.Text.Trim()
+                : this._currentUser.Email;
             string receiverEmail = this.txtReceiverEmail.Text.Trim();
             string subject = this.txtSubject.Text.Trim();
             string content = this.rtbContent.Text.Trim();
@@ -294,8 +388,8 @@ namespace PROJECT_OOP_WINFORM_FINAL.GUI
 
         private void ClearInputs()
         {
-            this.txtSenderEmail.Clear();
-            this.txtReceiverEmail.Text = this._currentUser == null ? "admin@ueh.edu.vn" : this._currentUser.Email;
+            this.txtSenderEmail.Text = this._currentUser == null ? "" : this._currentUser.Email;
+            this.txtReceiverEmail.Text = "admin@ueh.edu.vn";
             this.txtSubject.Clear();
             this.rtbContent.Clear();
         }

@@ -67,7 +67,7 @@
             label2.ForeColor = Color.FromArgb(255, 112, 67);
             label2.Location = new Point(117, 48);
             label2.Name = "label2";
-            label2.Size = new Size(166, 48);
+            label2.Size = new Size(113, 32);
             label2.TabIndex = 2;
             label2.Text = "BẢN TIN";
             // 
@@ -78,7 +78,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(174, 48);
+            label1.Size = new Size(118, 32);
             label1.TabIndex = 1;
             label1.Text = "QUẢN LÝ";
             // 
@@ -120,7 +120,7 @@
             txtPassword.Location = new Point(251, 209);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(251, 34);
+            txtPassword.Size = new Size(251, 25);
             txtPassword.TabIndex = 10;
             // 
             // txtEmail
@@ -128,7 +128,7 @@
             txtEmail.BorderStyle = BorderStyle.FixedSingle;
             txtEmail.Location = new Point(251, 140);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(251, 34);
+            txtEmail.Size = new Size(251, 25);
             txtEmail.TabIndex = 9;
             // 
             // label4
@@ -136,7 +136,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(115, 209);
             label4.Name = "label4";
-            label4.Size = new Size(94, 28);
+            label4.Size = new Size(68, 19);
             label4.TabIndex = 8;
             label4.Text = "Mật khẩu";
             // 
@@ -145,7 +145,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(115, 140);
             label3.Name = "label3";
-            label3.Size = new Size(94, 28);
+            label3.Size = new Size(66, 19);
             label3.TabIndex = 7;
             label3.Text = "Tài khoản";
             // 
@@ -155,7 +155,7 @@
             lblQuayLai.BackColor = Color.White;
             lblQuayLai.Location = new Point(6, 516);
             lblQuayLai.Name = "lblQuayLai";
-            lblQuayLai.Size = new Size(83, 28);
+            lblQuayLai.Size = new Size(59, 19);
             lblQuayLai.TabIndex = 6;
             lblQuayLai.Text = "Quay lại";
             lblQuayLai.Click += lblQuayLai_Click_1;
@@ -243,16 +243,15 @@
             pnlNhapLieu.Size = new Size(671, 553);
             pnlNhapLieu.TabIndex = 3;
             pnlNhapLieu.Visible = false;
-            // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(144F, 144F);
+            AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
             ClientSize = new Size(1021, 553);
             Controls.Add(pnlLeft);
-            Controls.Add(pnlChonQuyen);
             Controls.Add(pnlNhapLieu);
+            Controls.Add(pnlChonQuyen);
             Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Login";

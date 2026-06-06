@@ -1,4 +1,5 @@
 ﻿using Project_OOP;
+using PROJECT_OOP_WINFORM_FINAL.GUI;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -12,7 +13,7 @@ namespace PROJECT_OOP_WINFORM_FINAL
         private UserManager _userManager;
         private int _selectedRole = 0;
         private PublicationManager _pubManager;
-        private Button _btnForgotPassword = null!;
+        private Button? _btnForgotPassword;
 
         public Login()
         {
@@ -34,19 +35,42 @@ namespace PROJECT_OOP_WINFORM_FINAL
 
         private void CreateForgotPasswordButton()
         {
+            if (_btnForgotPassword != null)
+            {
+                return;
+            }
+
             _btnForgotPassword = new Button();
             _btnForgotPassword.BackColor = Color.White;
             _btnForgotPassword.FlatStyle = FlatStyle.Flat;
             _btnForgotPassword.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             _btnForgotPassword.ForeColor = Color.FromArgb(0, 114, 118);
-            _btnForgotPassword.Location = new Point(194, 429);
             _btnForgotPassword.Name = "btnForgotPassword";
-            _btnForgotPassword.Size = new Size(350, 42);
+            _btnForgotPassword.Size = new Size(260, 38);
             _btnForgotPassword.TabIndex = 13;
             _btnForgotPassword.Text = "QUÊN MẬT KHẨU?";
             _btnForgotPassword.UseVisualStyleBackColor = false;
             _btnForgotPassword.Click += btnForgotPassword_Click;
             pnlNhapLieu.Controls.Add(_btnForgotPassword);
+            CenterForgotPasswordButton();
+            pnlNhapLieu.Resize += pnlNhapLieu_Resize;
+        }
+
+        private void CenterForgotPasswordButton()
+        {
+            if (_btnForgotPassword == null)
+            {
+                return;
+            }
+
+            int left = button5.Left + (button5.Width - _btnForgotPassword.Width) / 2;
+            int top = button5.Bottom + 16;
+            _btnForgotPassword.Location = new Point(left, top);
+        }
+
+        private void pnlNhapLieu_Resize(object? sender, EventArgs e)
+        {
+            CenterForgotPasswordButton();
         }
 
         private void InitializeMockData()
@@ -205,12 +229,6 @@ namespace PROJECT_OOP_WINFORM_FINAL
             this.Show();
         }
 
-        private void btnForgotPassword_Click(object? sender, EventArgs e)
-        {
-            GUI.ResetPasswordForm frmResetPassword = new GUI.ResetPasswordForm();
-            frmResetPassword.ShowDialog();
-        }
-
         private void SyncUsersFromDatabase()
         {
             if (_database.Subscribers != null)
@@ -223,6 +241,19 @@ namespace PROJECT_OOP_WINFORM_FINAL
                     }
                 }
             }
+        }
+
+        private void btnForgotPassword_Click(object? sender, EventArgs e)
+        {
+            OpenResetPasswordForm();
+        }
+
+        private void OpenResetPasswordForm()
+        {
+            ResetPasswordForm frmReset = new ResetPasswordForm();
+            this.Hide();
+            frmReset.ShowDialog();
+            this.Show();
         }
     }
 }

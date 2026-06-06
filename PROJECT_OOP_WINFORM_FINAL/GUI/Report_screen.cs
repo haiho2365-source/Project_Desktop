@@ -16,11 +16,13 @@ namespace PROJECT_OOP_WINFORM_FINAL
         private PublicationManager _pubManager;
         private Person _currentUser;
 
-        private Button _currentActiveButton;
+        private Button _currentActiveButton = null!;
+        private Button _btnMailbox = null!;
 
         public Report_screen()
         {
             InitializeComponent();
+            InitializeMailboxButton();
         }
 
         private void ShowFunction(Form form)
@@ -37,11 +39,34 @@ namespace PROJECT_OOP_WINFORM_FINAL
         public Report_screen(PublicationManager pubManager, Person user)
         {
             InitializeComponent();
+            InitializeMailboxButton();
             this._pubManager = pubManager;
             this._currentUser = user;
 
             this.Text = "Khu vực Phóng viên: " + _currentUser.FullName;
         }
+
+        private void InitializeMailboxButton()
+        {
+            _btnMailbox = new Button();
+            _btnMailbox.BackColor = Color.FromArgb(0, 114, 118);
+            _btnMailbox.FlatAppearance.BorderSize = 0;
+            _btnMailbox.FlatStyle = FlatStyle.Flat;
+            _btnMailbox.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            _btnMailbox.ForeColor = Color.White;
+            _btnMailbox.Location = new Point(btnProfile.Right + 6, btnProfile.Top);
+            _btnMailbox.Padding = Padding.Empty;
+            _btnMailbox.Size = btnProfile.Size;
+            _btnMailbox.Text = "Hòm thư";
+            _btnMailbox.TextAlign = ContentAlignment.MiddleCenter;
+            _btnMailbox.UseVisualStyleBackColor = false;
+            _btnMailbox.Click += btnMailbox_Click;
+            _btnMailbox.MouseEnter += btnNav_MouseEnter;
+            _btnMailbox.MouseLeave += btnNav_MouseLeave;
+            panel1.Controls.Add(_btnMailbox);
+            _btnMailbox.BringToFront();
+        }
+
         private void ActivateButton(object btnSender)
         {
             if (btnSender != null)
@@ -134,6 +159,12 @@ namespace PROJECT_OOP_WINFORM_FINAL
             ActivateButton(sender);
 
             ShowFunction(new GUI.NewsManager(this._pubManager, this._currentUser));
+        }
+
+        private void btnMailbox_Click(object? sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            ShowFunction(new GUI.MailboxForm(this._currentUser));
         }
     }
 }
