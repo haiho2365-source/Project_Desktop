@@ -1,4 +1,4 @@
-﻿using Project_Desktop;
+using Project_Desktop;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -55,11 +55,31 @@ public class UserManager
         }
     }
 
-    public bool AddUser(Person newUser)
+    public bool AddUserToMemory(Person newUser)
     {
+        if (newUser == null) return false;
+
         for (int i = 0; i < this._userList.Count; i = i + 1)
         {
-            if (this._userList[i].Id == newUser.Id) return false;
+            if (string.Equals(this._userList[i].Id, newUser.Id, StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(this._userList[i].Email, newUser.Email, StringComparison.OrdinalIgnoreCase))
+            {
+                return false;
+            }
+        }
+
+        this._userList.Add(newUser);
+        return true;
+    }
+
+    public bool AddUser(Person newUser)
+    {
+        if (newUser == null) return false;
+
+        for (int i = 0; i < this._userList.Count; i = i + 1)
+        {
+            if (string.Equals(this._userList[i].Id, newUser.Id, StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(this._userList[i].Email, newUser.Email, StringComparison.OrdinalIgnoreCase)) return false;
         }
         this._userList.Add(newUser);
 
@@ -162,3 +182,4 @@ public class UserManager
         return null;
     }
 }
+

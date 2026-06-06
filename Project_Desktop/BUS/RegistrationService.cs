@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Project_Desktop
 {
@@ -13,7 +13,7 @@ namespace Project_Desktop
 
         public bool Register(string id, string fullName, string email, string password)
         {
-            if (this._database.IsEmailExists(email) == true)
+            if (this._database.IsEmailExists(email) == true || this._database.IsUserIdExists(id) == true)
             {
                 return false;
             }

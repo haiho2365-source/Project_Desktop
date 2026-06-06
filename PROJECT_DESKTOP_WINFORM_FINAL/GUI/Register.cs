@@ -1,4 +1,4 @@
-﻿using Project_Desktop;
+using Project_Desktop;
 using System;
 using System.Windows.Forms;
 
@@ -18,7 +18,7 @@ namespace PROJECT_DESKTOP_WINFORM_FINAL.GUI
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string id = "SB" + DateTime.Now.ToString("MMddHHmmss");
+            string id = GenerateSubscriberId();
 
             string fullName = txtFullName.Text.Trim();
             string email = txtEmail.Text.Trim();
@@ -50,9 +50,22 @@ namespace PROJECT_DESKTOP_WINFORM_FINAL.GUI
             }
         }
 
+        private string GenerateSubscriberId()
+        {
+            string id;
+            do
+            {
+                id = "SB" + DateTime.Now.ToString("MMddHHmmssfff");
+            }
+            while (this._database.IsUserIdExists(id));
+
+            return id;
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
     }
 }
+

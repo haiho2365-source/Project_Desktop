@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
@@ -78,6 +78,19 @@ namespace Project_Desktop
             }
         }
 
+        public bool IsUserIdExists(string id)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT COUNT(1) FROM Users WHERE Id = @Id", conn))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    return (int)cmd.ExecuteScalar() > 0;
+                }
+            }
+        }
+
         private void LoadFromDatabase()
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
@@ -108,3 +121,4 @@ namespace Project_Desktop
         }
     }
 }
+

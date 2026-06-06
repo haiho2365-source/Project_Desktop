@@ -1,4 +1,4 @@
-﻿using Project_Desktop;
+using Project_Desktop;
 using PROJECT_DESKTOP_WINFORM_FINAL.GUI;
 using System;
 using System.Collections.Generic;
@@ -85,7 +85,7 @@ namespace PROJECT_DESKTOP_WINFORM_FINAL.GUI
             {
                 foreach (Subscriber sub in _database.Subscribers)
                 {
-                    _userManager.AddUser(sub);
+                    _userManager.AddUserToMemory(sub);
                 }
             }
         }
@@ -237,7 +237,7 @@ namespace PROJECT_DESKTOP_WINFORM_FINAL.GUI
                 {
                     if (_userManager.FindUser(sub.Email) == null)
                     {
-                        _userManager.AddUser(sub);
+                        _userManager.AddUserToMemory(sub);
                     }
                 }
             }
@@ -257,3 +257,5 @@ namespace PROJECT_DESKTOP_WINFORM_FINAL.GUI
         }
     }
 }
+
+
