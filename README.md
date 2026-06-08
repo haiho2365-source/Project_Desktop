@@ -18,8 +18,8 @@ Các chức năng chính của chương trình bao gồm:
 Để chạy được mã nguồn này, máy tính cần đáp ứng:
 * **Hệ điều hành:** Windows 10/11.
 * **Công cụ lập trình:** Visual Studio (Khuyên dùng phiên bản 2019 hoặc 2022).
-* **Nền tảng:** .NET Framework hoặc .NET Core/6.0+ (Tùy phiên bản bạn sử dụng).
-* **Cơ sở dữ liệu:** SQL Server (Nếu dự án có sử dụng database).
+* **Nền tảng:** .NET Framework hoặc .NET Core/6.0+ (Tùy phiên bản sử dụng).
+* **Cơ sở dữ liệu:** SQL Server.
 
 ---
 
@@ -41,6 +41,7 @@ Bạn có thể cài đặt và chạy thử nghiệm dự án theo các bước
 
 **Bước 3: Cấu hình và Chạy**
 * Nếu có file script SQL, hãy chạy nó trong SQL Server Management Studio (SSMS) để khởi tạo dữ liệu.
+* Chỉnh PROJECT_DESKTOP_WINFORM_FINAL làm startup project
 * Trong Visual Studio, nhấn phím **F5** hoặc nút **Start** trên thanh công cụ để biên dịch và chạy chương trình.
 
 ---
@@ -53,13 +54,16 @@ Dự án được thực hiện bởi nhóm sinh viên:
 
 | 1 | **Hồ Duy Hải** 
 
-| 2 | **Lê Bảo Ngọc** 
+| 2 | **Dương Hoàng Sâm** 
 
-| 3 | **Lê Nguyễn Khánh Trình** 
+| 3 | **Nguyễn Duy Thành Tài** 
 
-| 4 | **Hồ Gia Bảo** 
+| 4 | **Tiêu Lâm Định Quốc** 
 
----
+| 5 | **Phạm Thiên Long** 
+
+| 6 | **Hà Ngọc Thiện** 
+
 
 ##  Liên hệ
 Nếu có thắc mắc hoặc góp ý về chương trình, vui lòng tạo **Issue** trên Github hoặc liên hệ với nhóm phát triển.
